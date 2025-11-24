@@ -23,4 +23,6 @@ COPY . /app/
 EXPOSE 8000
 
 # Use shell form to properly expand PORT environment variable
-CMD ["sh", "-c", "uvicorn server:app --host 0.0.0.0 --port ${PORT:-8000}"]
+CMD sh -c "uvicorn server:app --host 0.0.0.0 --port ${PORT:-8000}"
+
+
